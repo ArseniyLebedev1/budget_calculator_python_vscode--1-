@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run API",
+      "type": "shell",
+      "command": "uvicorn app.main:app --reload",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "pytest -v",
+      "problemMatcher": [],
+      "group": "test"
+    },
+    {
+      "label": "Coverage",
+      "type": "shell",
+      "command": "pytest --cov=app --cov-report=term-missing",
+      "problemMatcher": [],
+      "group": "test"
+    }
+  ]
+}
